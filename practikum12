@@ -1,0 +1,13 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+x=per_cent['ТКБ']
+y=per_cent['СКБ']
+z=per_cent['ВТБ']
+q=per_cent['СБЕР']
+money=int(input("введите сумму вклада"))
+d1=(money)*x*0.01
+d2=(money)*y*0.01
+d3=(money)*z*0.01
+d4=(money)*q*0.01
+deposit_list=[d1,d2,d3,d4]
+print(deposit_list)
+print('Максимальная сумма, которую вы cможете заработать:',max(deposit_list))
