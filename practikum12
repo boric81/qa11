@@ -1,10 +1,9 @@
 per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
-x,y,z,q=per_cent['ТКБ'],per_cent['СКБ'],per_cent['ВТБ'],per_cent['СБЕР']
-money=int(input("введите сумму вклада"))
-d1=round((money)*x*0.01,2)
-d2=round((money)*y*0.01,2)
-d3=round((money)*z*0.01,2)
-d4=round((money)*q*0.01,2)
+money=int(input("Введите сумму депозита, руб\t"))
+d1=round(per_cent.pop('ТКБ')*money*(100**-1))
+d2=round(per_cent.pop('СКБ')*money*(100**-1))
+d3=round(per_cent.pop('ВТБ')*money*(100**-1))
+d4=round(per_cent.pop('СБЕР')*money*(100**-1))
 deposit_list=[d1,d2,d3,d4]
 print(deposit_list)
-print('Максимальная сумма, которую вы cможете заработать:',max(deposit_list))
+print('Максимальная сумма, которую вы cможете заработать:',max(deposit_list),"руб")
